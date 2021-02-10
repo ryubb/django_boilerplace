@@ -1,0 +1,5 @@
+.coverage
+coverage
+.env
+.mypy_cache
+app/**/__pycache__

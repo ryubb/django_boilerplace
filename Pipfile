@@ -1,0 +1,36 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+runserver = "python manage.py runserver --settings=config.settings.local"
+showmigrations = "python manage.py showmigrations --settings=config.settings.local"
+migration = "python manage.py makemigrations --settings=config.settings.local"
+migrate = "python manage.py migrate --settings=config.settings.local"
+test = "python manage.py test --settings=config.settings.local"
+shell = "python manage.py shell --settings=config.settings.local"
+loaddata = "python manage.py loaddata initial_data.json --settings=config.settings.local"
+createsuperuser = "python manage.py createsuperuser --settings=config.settings.local"
+type-check = "mypy ."
+lint = "flake8"
+autopep8 = "autopep8 --in-place --recursive ."
+coverage = "coverage run manage.py test --exclude-tag=ignore --settings=config.settings.local"
+coverage-report-in-console = "coverage report"
+coverage-report-in-html = "coverage html"
+collectstatic = "python manage.py collectstatic --settings=config.settings.local"
+compilescss = "python manage.py compilescs --settings=config.settings.locals"
+findstatic = "python manage.py findstatic . --settings=config.settings.local"
+
+[packages]
+django = "==3.0"
+
+[dev-packages]
+flake8 = "*"
+autopep8 = "*"
+mypy = "*"
+django-stubs = "*"
+coverage = "*"
+
+[requires]
+python_version = "3.9"

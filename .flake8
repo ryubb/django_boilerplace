@@ -1,0 +1,5 @@
+[flake8]
+ignore=E402, D203, W504
+max-line-length=100
+max-complexity=10
+exclude = app/*/__init__.py, app/migrations/*, drf_app/*/__init__.py, config
